@@ -7,7 +7,6 @@ var loadFile = function(event) {
 function setMemeText() { 
 	var memeLabel = document.getElementById("memeText");
 	var givenText = document.getElementById("textInput").value + "";
-
 	memeLabel.innerHTML = givenText;
 
 } 
