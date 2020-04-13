@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="script.js"></script>
   </head>
-  
+
   <body>
     
     <div class="banner" align="center">
@@ -14,20 +14,21 @@
     
     <div align="center">
     	<div class="content">
-
-        <form>
+          <form>
           <label>Meme text: </label>
           <input type="text" id="textInput"/>
+          </form>
+          <button onclick="setMemeText()">Apply text</button>
+          
 
+         
           <div class="meme-container">
           <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
           <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
           <p><img id="meme"/></p>
 
-          <label class="meme-text">epic meme</label>
+          <label id="memeText">ghhjfghfgh</label>
           </div>
-      
-          </form>
       
 
       </div>
