@@ -16,3 +16,10 @@ function setTextColor() {
 	var color = colorPicker.value + "";
 	memeLabel.style.color = color;
 }
+
+function setFontSize() {
+	var memeLabel = document.getElementById("memeText");
+	var fontSizeInput = document.getElementById("fontSize");
+	var fontSize = fontSizeInput.value;
+	memeLabel.style.fontSize = fontSize;
+}
