@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Meme generator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+  </head>
+  
+  <body>
+    
+    <div class="banner" align="center">
+			<h1>Byg et meme!</h1>
+    </div>
+    	
+    
+    <div align="center">
+    	<div class="content">
+
+        <form>
+          <label>Meme text: </label>
+          <input type="text" id="textInput"/>
+
+          <div class="meme-container">
+          <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+          <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+          <p><img id="meme"/></p>
+
+          <label class="meme-text">epic meme</label>
+          </div>
+      
+          </form>
+      
+
+      </div>
+    </div>
+
+    
+   
+  </body>
+</html>
