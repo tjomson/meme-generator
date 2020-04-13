@@ -15,25 +15,25 @@
     <div align="center">
     	<div class="content">
         <input type="file"  accept="image/*" name="image" id="imageUpload"  onchange="loadFile(event)" hidden>
-        <p><label class="continue" for="imageUpload">Upload Image</label></p>
+        <p><label class="continue" for="imageUpload">Upload billede</label></p>
 
-        <label class="memeOption" for="textInput">Meme text: </label>
+        <label class="memeOption" for="textInput">Meme tekst: </label>
         <input class="memeOption" onkeyup="setMemeText()" type="text" id="textInput"/>
 
         <p>
-          <label class="memeOption" for="colors">Color of text: </label>
+          <label class="memeOption" for="colors">Tekstfarve: </label>
           <select class="memeOption" id="colors" onchange="setTextColor()">
-            <option value="black">Black</option>
-            <option value="white">White</option>
-            <option value="red">Red</option>
-            <option value="blue">Blue</option>
-            <option value="green">Green</option>
-            <option value="yellow">Yellow</option>
+            <option value="black">Sort</option>
+            <option value="white">Hvid</option>
+            <option value="red">Rød</option>
+            <option value="blue">Blå</option>
+            <option value="green">Grøn</option>
+            <option value="yellow">Gul</option>
           </select>
         </p>
 
       <p>
-        <label class="memeOption" for="fontSize">Font size: </label>
+        <label class="memeOption" for="fontSize">Skriftstørrelse: </label>
         <input class="memeOption" type="number" id="fontSize" min="10" max="150" placeholder="16" onchange="setFontSize()">
       </p>
 

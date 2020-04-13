@@ -69,3 +69,9 @@ body {
     font-size: 30;
     border-radius: 8px;
   }
+
+  label {
+    max-width: 100%;
+    display:inline-block;
+    overflow-wrap: break-word;
+  }
