@@ -11,13 +11,13 @@
     	<div class="content">
         <input type="file"  accept="image/*" name="image" id="imageUpload"  onchange="loadFile(event)" hidden>
         <p><label class="continue" for="imageUpload">Upload billede</label></p>
-
-        <label class="memeOption" for="textInput">Meme tekst: </label>
-        <input class="memeOption" onkeyup="setMemeText()" type="text" id="textInput"/>
+    	<div class="memeOptions">
+        <label for="textInput">Meme tekst: </label>
+        <input class="memeOptions" onkeyup="setMemeText()" type="text" id="textInput"/>
 
         <p>
-          <label class="memeOption" for="colors">Tekstfarve: </label>
-          <select class="memeOption" id="colors" onchange="setTextColor()">
+          <label for="colors">Tekstfarve: </label>
+          <select class="memeOptions" id="colors" onchange="setTextColor()">
             <option value="black">Sort</option>
             <option value="white">Hvid</option>
             <option value="red">Rød</option>
@@ -28,15 +28,22 @@
         </p>
 
       <p>
-        <label class="memeOption" for="fontSize">Skriftstørrelse: </label>
-        <input class="memeOption" type="number" id="fontSize" min="10" max="150" placeholder="16" onchange="setFontSize()">
+        <label for="fontSize">Skriftstørrelse: </label>
+        <input class="memeOptions" type="number" id="fontSize" min="10" max="150" placeholder="16" onchange="setFontSize()">
+      </p>
+
+      <p>
+        <label>X-placering: </label>
+        <input onchange="setPlacement()" class="memeOptions" type="number" id="xPlacement" min="0" max="100" placeholder="0-100">
+        <label>Y-placering: </label>
+        <input onchange="setPlacement()" class="memeOptions" type="number" id="yPlacement" min="0" max="100" placeholder="0-100">
       </p>
 
         <div class="meme-container">
           <img id="meme" class="meme" hidden/>
           <label id="memeText" class="meme-text" hidden></label>
         </div>
-      
+      </div>
 
       </div>
     </div>

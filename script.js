@@ -25,3 +25,11 @@ function setFontSize() {
 	var fontSize = fontSizeInput.value;
 	memeLabel.style.fontSize = fontSize;
 }
+
+function setPlacement() {
+	var memeLabel = document.getElementById("memeText");
+	var x = document.getElementById("xPlacement").value;
+	var y = document.getElementById("yPlacement").value;
+	memeLabel.style.left = x + "%";
+	memeLabel.style.top = y + "%";
+}
