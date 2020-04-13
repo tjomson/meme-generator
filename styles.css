@@ -22,7 +22,12 @@ body {
     text-align: center;
   }
   
-  button {
+  .content {
+  	padding-top:170px;
+    max-width: 800px;
+  }
+  
+  .continue {
     border-radius: 8px;
     width: 90%;
     height: 70px;
@@ -30,14 +35,6 @@ body {
     text-align: center;
 		letter-spacing: 0.04em;
     font-family: Impact, Charcoal, sans-serif;
-  }
-  
-  .content {
-  	padding-top:170px;
-    max-width: 800px;
-  }
-  
-  .continue {
     border: none;
     background-color: #418E81;
     font-size: 50;
