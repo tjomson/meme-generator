@@ -9,13 +9,17 @@
     
     <div align="center">
     	<div class="content">
+        <p><button class="back" onclick="window.location.href = 'index.html'">Tilbage til startside</button></p>
+        <!--Upload-feltet er skjult. I stedet vises labelen, som kalder inputfeltet-->
         <input type="file"  accept="image/*" name="image" id="imageUpload"  onchange="loadFile(event)" hidden>
         <p><label class="continue" for="imageUpload">Upload billede</label></p>
     	<div class="memeOptions">
+        <!--Inputfelt for selve teksten-->
         <label for="textInput">Meme tekst: </label>
         <input class="memeOptions" onkeyup="setMemeText()" type="text" id="textInput"/>
 
         <p>
+          <!--Dropdown til at vælge farve-->
           <label for="colors">Tekstfarve: </label>
           <select class="memeOptions" id="colors" onchange="setTextColor()">
             <option value="black">Sort</option>
@@ -28,17 +32,21 @@
         </p>
 
       <p>
+        <!--Inputfelt af type "number" til skriftstørrelse-->
         <label for="fontSize">Skriftstørrelse: </label>
         <input class="memeOptions" type="number" id="fontSize" min="10" max="150" placeholder="16" onchange="setFontSize()">
       </p>
 
       <p>
+        <!--Input til placering af teksten på billedet-->
         <label>X-placering: </label>
         <input onchange="setPlacement()" class="memeOptions" type="number" id="xPlacement" min="0" max="100" placeholder="0-100">
         <label>Y-placering: </label>
         <input onchange="setPlacement()" class="memeOptions" type="number" id="yPlacement" min="0" max="100" placeholder="0-100">
       </p>
 
+        <!--Det uploadede billede vises her med teksten lagt henover-->
+        <!--Billede og label er skujlt indtil der er uploadet noget-->
         <div class="meme-container">
           <img id="meme" class="meme" hidden/>
           <label id="memeText" class="meme-text" hidden></label>
@@ -48,6 +56,7 @@
       </div>
     </div>
 
+    <!--Dette er top-banneret. Det ligger i bunden af koden, så det vises ovenpå alt andet-->
     <div class="banner" align="center">
 			<h1>Byg et meme!</h1>
     </div>

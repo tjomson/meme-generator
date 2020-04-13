@@ -10,23 +10,27 @@ body {
   	font-size: 70;
   }
 
+/*Teksten på memet. Der er sat en standard-placering, som dog kan ændres af brugeren*/
   .meme-text {
   position: absolute;
   top: 20%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);/*Centrerer teksten*/
   }
 
+/*Til den div som indeholder billede og tekst*/
   .meme-container {
     position: relative;
     text-align: center;
   }
   
+  /*Hele sidens indhold er i denne div*/
   .content {
   	padding-top:170px;
     max-width: 800px;
   }
   
+/*Knappen til "kom i gang" og "upload billede"*/
   .continue {
     border-radius: 8px;
     width: 90%;
@@ -41,7 +45,24 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 		cursor: pointer;
   }
+
+/*Knappen til at gå tilbage*/
+  .back {
+    border-radius: 8px;
+    width: 90%;
+    height: 70px;
+    font-size: 30;
+    text-align: center;
+		letter-spacing: 0.04em;
+    font-family: Impact, Charcoal, sans-serif;
+    border: none;
+    background-color: #E26F7C;
+    font-size: 50;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		cursor: pointer;
+  }
   
+/*Banneret øverst på siden*/
   .banner {
   	align-items: center;
     background-color: white;
@@ -52,6 +73,7 @@ body {
     top: 0;
   }
   
+/*Til afsnittet om dagens meme på startsiden*/
   .mainContent {
   	width: 70%;
   	text-align: left;
@@ -59,19 +81,23 @@ body {
     font-size: 30;
   }
   
+/*Alle billeder*/
   img {
   	border: 1px solid #000000;
     width: 100%;
-   	max-height: 100%;
+     max-height: 100%;
+     border-radius: 8px;
   }
 
+/*De muligheder man har for at ændre ved memet som bruger*/
   .memeOptions {
     font-size: 30;
     border-radius: 8px;
   }
 
+/*Til label som benyttes bl.a. i "upload billede"-knappen og som teksten på memet*/
   label {
     max-width: 100%;
-    display:inline-block;
-    overflow-wrap: break-word;
+    display:inline-block; /*Gør at knappen "upload selv" har den rette bredde*/
+    overflow-wrap: break-word; /*Bryder ordet op hvis det går ud over kanten*/
   }
