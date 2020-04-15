@@ -1,13 +1,16 @@
+
 body {
-  font-family: Impact, Charcoal, sans-serif;
+  font-family: 'Roboto', sans-serif; /*Dette er en google-font*/
   background-color: #DFF2EE;
   margin: 0;
   padding: 0;
   min-width: 300px;
+  align-items: center;
+  text-align: center;
 }
   
   h1 {
-  	font-size: 70;
+  	font-size: 70px;
   }
 
 /*Teksten på memet. Der er sat en standard-placering, som dog kan ændres af brugeren*/
@@ -21,53 +24,46 @@ body {
 /*Til den div som indeholder billede og tekst*/
   .meme-container {
     position: relative;
-    text-align: center;
+  }
+
+  p {
+    margin-bottom: 20px;
   }
   
   /*Hele sidens indhold er i denne div*/
   .content {
-  	padding-top:170px;
+    flex-direction: column;
+  	padding-top:130px;
     max-width: 800px;
+    margin: auto;
+    display:flex;
   }
   
-/*Knappen til "kom i gang" og "upload billede"*/
-  .continue {
+/*Knappen til "kom i gang" og "upload billede", samt den til at gå tilbage*/
+  .continue, .back {
     border-radius: 8px;
     width: 90%;
     height: 70px;
-    font-size: 30;
-    text-align: center;
-		letter-spacing: 0.04em;
-    font-family: Impact, Charcoal, sans-serif;
+    font-size: 60px;
     border: none;
     background-color: #418E81;
     font-size: 50;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-		cursor: pointer;
+    cursor: pointer; /*User feedback, i form af at cursoren bliver en pointer*/
   }
+
 
 /*Knappen til at gå tilbage*/
   .back {
-    border-radius: 8px;
-    width: 90%;
-    height: 70px;
-    font-size: 30;
-    text-align: center;
-		letter-spacing: 0.04em;
-    font-family: Impact, Charcoal, sans-serif;
-    border: none;
     background-color: #E26F7C;
-    font-size: 50;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-		cursor: pointer;
   }
   
 /*Banneret øverst på siden*/
   .banner {
-  	align-items: center;
+    padding-top: 10px;
     background-color: white;
     width: 100%;
-    height:150px;
+    height:100px;
 		margin-bottom: 20;
     position: fixed;
     top: 0;
@@ -91,7 +87,7 @@ body {
 
 /*De muligheder man har for at ændre ved memet som bruger*/
   .memeOptions {
-    font-size: 30;
+    font-size: 30px;
     border-radius: 8px;
   }
 

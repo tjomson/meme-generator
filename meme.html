@@ -1,65 +1,68 @@
-<html>
-  <head>
-    <title>Meme generator</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="script.js"></script>
-  </head>
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <title>Meme generator</title>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="script.js"></script>
+</head>
 
-  <body>
-    
-    <div align="center">
-    	<div class="content">
-        <p><button class="back" onclick="window.location.href = 'index.html'">Tilbage til startside</button></p>
-        <!--Upload-feltet er skjult. I stedet vises labelen, som kalder inputfeltet-->
-        <input type="file"  accept="image/*" name="image" id="imageUpload"  onchange="loadFile(event)" hidden>
-        <p><label class="continue" for="imageUpload">Upload billede</label></p>
-    	<div class="memeOptions">
-        <!--Inputfelt for selve teksten-->
-        <label for="textInput">Meme tekst: </label>
-        <input class="memeOptions" onkeyup="setMemeText()" type="text" id="textInput"/>
+<body>
+  <div class="content">
+    <p><button class="back" onclick="window.location.href = 'index.html'">Tilbage til startside</button></p>
+    <!--Upload-feltet er skjult. I stedet vises labelen, som kalder inputfeltet-->
+    <input type="file" accept="image/*" name="image" id="imageUpload" onchange="loadFile(event)" hidden>
+    <p><label class="continue" for="imageUpload">Upload billede</label></p>
+    <div class="memeOptions">
+      <!--Inputfelt for selve teksten-->
+      <label for="textInput">Meme tekst: </label>
+      <input class="memeOptions" onkeyup="setMemeText()" type="text" id="textInput" />
 
-        <p>
-          <!--Dropdown til at vælge farve-->
-          <label for="colors">Tekstfarve: </label>
-          <select class="memeOptions" id="colors" onchange="setTextColor()">
-            <option value="black">Sort</option>
-            <option value="white">Hvid</option>
-            <option value="red">Rød</option>
-            <option value="blue">Blå</option>
-            <option value="green">Grøn</option>
-            <option value="yellow">Gul</option>
-          </select>
-        </p>
+      <p>
+        <!--Dropdown til at vælge farve-->
+        <label for="colors">Tekstfarve: </label>
+        <select class="memeOptions" id="colors" onchange="setTextColor()">
+          <option value="black">Sort</option>
+          <option value="white">Hvid</option>
+          <option value="red">Rød</option>
+          <option value="blue">Blå</option>
+          <option value="green">Grøn</option>
+          <option value="yellow">Gul</option>
+        </select>
+      </p>
 
       <p>
         <!--Inputfelt af type "number" til skriftstørrelse-->
         <label for="fontSize">Skriftstørrelse: </label>
-        <input class="memeOptions" type="number" id="fontSize" min="10" max="150" placeholder="16" onchange="setFontSize()">
+        <input class="memeOptions" type="number" id="fontSize" min="10" max="150" placeholder="16"
+          onchange="setFontSize()">
       </p>
 
       <p>
         <!--Input til placering af teksten på billedet-->
         <label>X-placering: </label>
-        <input onchange="setPlacement()" class="memeOptions" type="number" id="xPlacement" min="0" max="100" placeholder="0-100">
+        <input onchange="setPlacement()" class="memeOptions" type="number" id="xPlacement" min="0" max="100"
+          placeholder="0-100">
         <label>Y-placering: </label>
-        <input onchange="setPlacement()" class="memeOptions" type="number" id="yPlacement" min="0" max="100" placeholder="0-100">
+        <input onchange="setPlacement()" class="memeOptions" type="number" id="yPlacement" min="0" max="100"
+          placeholder="0-100">
       </p>
 
-        <!--Det uploadede billede vises her med teksten lagt henover-->
-        <!--Billede og label er skujlt indtil der er uploadet noget-->
-        <div class="meme-container">
-          <img id="meme" class="meme" hidden/>
-          <label id="memeText" class="meme-text" hidden></label>
-        </div>
-      </div>
-
+      <!--Det uploadede billede vises her med teksten lagt henover-->
+      <!--Billede og label er skujlt indtil der er uploadet noget-->
+      <div class="meme-container">
+        <img id="meme" class="meme" hidden alt="Billedet kunne ikke indlæses, prøv igen"/><!--Ingen src er sat, da denne sættes af javascript-->
+        <label id="memeText" class="meme-text" hidden></label>
       </div>
     </div>
+  </div>
 
-    <!--Dette er top-banneret. Det ligger i bunden af koden, så det vises ovenpå alt andet-->
-    <div class="banner" align="center">
-			<h1>Byg et meme!</h1>
-    </div>
-   
-  </body>
+  <!--Dette er top-banneret. Det ligger i bunden af koden, så det vises ovenpå alt andet-->
+  <div class="banner">
+    <h1>Byg et meme!</h1>
+  </div>
+
+</body>
+
 </html>
