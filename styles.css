@@ -35,13 +35,13 @@ p {
   margin-bottom: 20px;
 }
 
-/*Hele sidens indhold er i denne div*/
+/*Hele sidens indhold er i denne div, undtagen banneret i toppen*/
 .content {
   flex-direction: column;
   padding-top: 130px;
   max-width: 800px;
   margin: auto;
-  display: flex;
+  display: flex; /*Alt i content er flexibelt, hvilket er godt for resposive-design*/
 }
 
 /*Knappen til "kom i gang" og "upload billede", samt den til at gå tilbage*/
@@ -55,6 +55,15 @@ p {
   font-size: 50;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;/*User feedback, i form af at cursoren bliver en pointer*/
+}
+
+/*Knapperne gøres lysere når der holdes over dem, for at indikere at de kan klikkes*/
+.continue:hover {
+  background-color: #54b8a7;
+}
+
+.back:hover {
+  background-color: #ff8795;
 }
 
 /*Knappen til at gå tilbage*/
