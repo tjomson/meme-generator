@@ -10,7 +10,7 @@ body {
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 8vh;
 }
 
 h2 {
@@ -38,7 +38,7 @@ p {
 /*Hele sidens indhold er i denne div, undtagen banneret i toppen*/
 .content {
   flex-direction: column;
-  padding-top: 130px;
+  padding-top: 160px;
   max-width: 800px;
   margin: auto;
   display: flex; /*Alt i content er flexibelt, hvilket er godt for resposive-design*/
@@ -48,7 +48,7 @@ p {
 .continue, .back {
   border-radius: 8px;
   width: 90%;
-  height: 70px;
+  min-height: 70px;
   font-size: 60px;
   border: none;
   background-color: #418E81;
@@ -76,7 +76,8 @@ p {
   padding-top: 10px;
   background-color: white;
   width: 100%;
-  height: 100px;
+  min-height: 100px;
+  max-height: 150px;
   margin-bottom: 20;
   position: fixed;
   top: 0;
